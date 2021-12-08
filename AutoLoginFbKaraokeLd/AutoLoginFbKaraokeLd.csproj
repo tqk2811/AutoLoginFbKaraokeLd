@@ -1,0 +1,110 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<LangVersion>8.0</LangVersion>
+		<TargetFrameworks>net462</TargetFrameworks>
+		<UseWPF>true</UseWPF>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<Platforms>x64</Platforms>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="AppData\Images\" />
+		<Folder Include="AppData\x64\" />
+		<Folder Include="Properties\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\x64\cvextern.dll" Link="AppData\x64\cvextern.dll">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Include="..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\x64\opencv_videoio_ffmpeg454_64.dll" Link="AppData\x64\opencv_videoio_ffmpeg454_64.dll">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Extended.Wpf.Toolkit" Version="4.2.0" />
+		<PackageReference Include="TwoFactorAuth.Net" Version="1.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="Newtonsoft.Json">
+	    <HintPath>..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\Newtonsoft.Json.dll</HintPath>
+	  </Reference>
+	  <Reference Include="PInvoke.Gdi32">
+	    <HintPath>..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\PInvoke.Gdi32.dll</HintPath>
+	  </Reference>
+	  <Reference Include="PInvoke.Kernel32">
+	    <HintPath>..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\PInvoke.Kernel32.dll</HintPath>
+	  </Reference>
+	  <Reference Include="PInvoke.User32">
+	    <HintPath>..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\PInvoke.User32.dll</HintPath>
+	  </Reference>
+	  <Reference Include="PInvoke.Windows.Core">
+	    <HintPath>..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\PInvoke.Windows.Core.dll</HintPath>
+	  </Reference>
+	  <Reference Include="PInvoke.Windows.ShellScalingApi">
+	    <HintPath>..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\PInvoke.Windows.ShellScalingApi.dll</HintPath>
+	  </Reference>
+	  <Reference Include="System.Drawing.Common">
+	    <HintPath>..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\System.Drawing.Common.dll</HintPath>
+	  </Reference>
+	  <Reference Include="TqkLibrary.Adb">
+	    <HintPath>..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\TqkLibrary.Adb.dll</HintPath>
+	  </Reference>
+	  <Reference Include="TqkLibrary.Media.Images">
+	    <HintPath>..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\TqkLibrary.Media.Images.dll</HintPath>
+	  </Reference>
+	  <Reference Include="TqkLibrary.Queues">
+	    <HintPath>..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\TqkLibrary.Queues.dll</HintPath>
+	  </Reference>
+	  <Reference Include="TqkLibrary.WinApi">
+	    <HintPath>..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\TqkLibrary.WinApi.dll</HintPath>
+	  </Reference>
+	  <Reference Include="TqkLibrary.WpfUi">
+	    <HintPath>..\..\..\Library\TqkLibrary\TqkLibrary\bin\Release\net462\TqkLibrary.WpfUi.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="AppData\Images\android_allow0.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="AppData\Images\fb_authContinue0.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="AppData\Images\fb_loginBtn0.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="AppData\Images\fb_okPopup0.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="AppData\Images\fb_password0.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="AppData\Images\fb_phoneOrEmail0.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="AppData\Images\fb_twoFaInput0.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="AppData\Images\kara_fbLogo0.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="AppData\Images\kara_fbLogo1.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="AppData\Images\kara_home0.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="AppData\Images\kara_home1.png">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	  <None Update="facebookAccounts.txt">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>
