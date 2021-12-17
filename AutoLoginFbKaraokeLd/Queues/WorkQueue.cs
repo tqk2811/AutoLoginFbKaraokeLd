@@ -117,19 +117,22 @@ namespace AutoLoginFbKaraokeLd.Queues
                     }
                 }).WithThrow().Build();
                 waiter.WaitUntil("fb_phoneOrEmail").AndTapFirst(Tap).WithThrow().Build();
-                await ldPlayer.Adb.DelayAsync(1000);
-                ldPlayerHelper.SendText(LdProfile.AccountName, 100);
+                await ldPlayer.Adb.DelayAsync(Setting.DelayBeforeWriteText);
+                ldPlayerHelper.SendText(LdProfile.AccountName, Setting.DelayStepWriteText);
+
                 waiter.WaitUntil("fb_password").AndTapFirst(Tap).WithThrow().Build();
-                await ldPlayer.Adb.DelayAsync(1000);
-                ldPlayerHelper.SendText(LdProfile.Data.FacebookAccount.Password, 100);
+                await ldPlayer.Adb.DelayAsync(Setting.DelayBeforeWriteText);
+                ldPlayerHelper.SendText(LdProfile.Data.FacebookAccount.Password, Setting.DelayStepWriteText);
+
                 waiter.WaitUntil("fb_loginBtn").AndTapFirst(Tap).WithThrow().Build();
                 waiter.WaitUntil("fb_okPopup").AndTapFirst(Tap).WithThrow().Build();
-                waiter.WaitUntil("fb_twoFaInput").AndTapFirst(Tap).WithThrow().Build();
-                await ldPlayer.Adb.DelayAsync(1000);
-                string facode = twoFactorAuth.GetCode(LdProfile.Data.FacebookAccount.TwoFA);
-                ldPlayerHelper.SendText(facode, 100);
-                waiter.WaitUntil("fb_authContinue").AndTapFirst(Tap).WithThrow().Build();
 
+                waiter.WaitUntil("fb_twoFaInput").AndTapFirst(Tap).WithThrow().Build();
+                await ldPlayer.Adb.DelayAsync(Setting.DelayBeforeWriteText);
+                string facode = twoFactorAuth.GetCode(LdProfile.Data.FacebookAccount.TwoFA);
+                ldPlayerHelper.SendText(facode, Setting.DelayStepWriteText);
+
+                waiter.WaitUntil("fb_authContinue").AndTapFirst(Tap).WithThrow().Build();
                 waiter.WaitUntil("kara_home", "fb_authContinue").AndTapFirst((index,point,finds) =>
                 {
                     switch(finds[index])

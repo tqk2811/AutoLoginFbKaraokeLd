@@ -9,7 +9,7 @@
         xmlns:WpfUiControl="clr-namespace:TqkLibrary.WpfUi.UserControls;assembly=TqkLibrary.WpfUi"
         xmlns:WpfUiConveter="clr-namespace:TqkLibrary.WpfUi.Converters;assembly=TqkLibrary.WpfUi"
         mc:Ignorable="d"
-        Title="SettingWindow" WindowStartupLocation="CenterOwner" Height="124" Width="549">
+        Title="SettingWindow" WindowStartupLocation="CenterOwner" Height="154" Width="549">
     <Window.DataContext>
         <ViewModels:SettingWVM/>
     </Window.DataContext>
@@ -40,7 +40,13 @@
             <Xceed:IntegerUpDown Minimum="10000" Maximum="120000" Value="{Binding FindImageTimeout}" Increment="5000" HorizontalAlignment="Right" Margin="0,5,4,0" VerticalAlignment="Top" Width="75" />
 
             <TextBlock HorizontalAlignment="Left" Margin="5,32,0,0" TextWrapping="Wrap" Text="Delay sau khởi động:" VerticalAlignment="Top"/>
-            <Xceed:IntegerUpDown Minimum="2000" Maximum="120000" Value="{Binding FindImageTimeout}" Increment="500" HorizontalAlignment="Right" Margin="0,30,4,0" VerticalAlignment="Top" Width="75" />
+            <Xceed:IntegerUpDown Minimum="2000" Maximum="120000" Value="{Binding DelayAfterStart}" Increment="500" HorizontalAlignment="Right" Margin="0,30,4,0" VerticalAlignment="Top" Width="75" />
+            
+            <TextBlock HorizontalAlignment="Left" Margin="5,56,0,0" TextWrapping="Wrap" Text="Delay trước khi viết:" VerticalAlignment="Top"/>
+            <Xceed:IntegerUpDown Minimum="100" Maximum="5000" Value="{Binding DelayBeforeWriteText}" Increment="10" HorizontalAlignment="Right" Margin="0,54,4,0" VerticalAlignment="Top" Width="74" />
+            
+            <TextBlock HorizontalAlignment="Left" Margin="6,80,0,0" TextWrapping="Wrap" Text="Delay mỗi ký tự khi viết:" VerticalAlignment="Top"/>
+            <Xceed:IntegerUpDown Minimum="10" Maximum="1000" Value="{Binding DelayStepWriteText}" Increment="10" HorizontalAlignment="Right" Margin="0,78,4,0" VerticalAlignment="Top" Width="75" />
 
         </Grid>
     </Grid>

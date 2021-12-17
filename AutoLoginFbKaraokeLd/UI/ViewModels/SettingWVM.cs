@@ -44,6 +44,18 @@ namespace AutoLoginFbKaraokeLd.UI.ViewModels
             get { return Setting.DelayAfterStart; }
             set { Setting.DelayAfterStart = value; NotifyPropertyChange(); Save(); }
         }
+        public int DelayBeforeWriteText
+        {
+            get { return Setting.DelayBeforeWriteText; }
+            set { Setting.DelayBeforeWriteText = value; NotifyPropertyChange(); Save(); }
+        }
+        public int DelayStepWriteText
+        {
+            get { return Setting.DelayStepWriteText; }
+            set { Setting.DelayStepWriteText = value; NotifyPropertyChange(); Save(); }
+        }
+
+
         public ScreenShotType ScreenShotType
         {
             get { return Setting.ScreenShotType; }
