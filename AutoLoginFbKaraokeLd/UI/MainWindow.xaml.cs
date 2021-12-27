@@ -32,7 +32,6 @@ namespace AutoLoginFbKaraokeLd.UI
         readonly MainWVM mainWVM;
         public MainWindow()
         {
-            Environment.SetEnvironmentVariable("PATH", Environment.GetEnvironmentVariable("PATH") + ";" + Singleton.LibFolder);
             InitializeComponent();
             this.mainWVM = this.DataContext as MainWVM;
             timer.Elapsed += Timer_Elapsed;
